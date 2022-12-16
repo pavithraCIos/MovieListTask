@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movie Detail-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MovieDetailViewController" id="BYZ-38-t0r" customClass="MovieDetailViewController" customModule="LenskartIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PUw-LT-1eW">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="PUw-LT-1eW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="29c-Lk-Yw1"/>
+                            <constraint firstItem="PUw-LT-1eW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Gi7-Zb-iF1"/>
+                            <constraint firstAttribute="bottom" secondItem="PUw-LT-1eW" secondAttribute="bottom" id="Obz-gK-hYo"/>
+                            <constraint firstItem="PUw-LT-1eW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="i2p-L6-4tb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Movie Detail" id="jhf-uu-KVH"/>
+                    <connections>
+                        <outlet property="tvMovieDetails" destination="PUw-LT-1eW" id="cuS-3J-Tze"/>
+                        <outlet property="vmMovieDetail" destination="SPF-Pt-WW2" id="NM3-xK-HiE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="SPF-Pt-WW2" customClass="MovieDetailViewModel" customModule="LenskartIOS" customModuleProvider="target">
+                    <connections>
+                        <outlet property="viewController" destination="BYZ-38-t0r" id="XFv-bC-7s5"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="671" y="62"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
